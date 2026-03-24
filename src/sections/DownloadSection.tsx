@@ -23,9 +23,7 @@ const DownloadSection = () => {
   const [showDialog, setShowDialog] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const { install, installUrl, canInstall, isInstalled } = useInstallPrompt();
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(
-    installUrl,
-  )}`;
+const qrCodeUrl = "/qr.png";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
