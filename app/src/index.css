@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 85% 50%;
+    --radius: 0.875rem;
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 85% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-satta-black text-white font-inter antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-satta-red via-satta-gold to-satta-red;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-satta-red to-satta-red-dark text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-satta hover:shadow-satta-glow hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-satta-gold/50 hover:border-satta-gold text-satta-gold font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:bg-satta-gold/10;
+  }
+  
+  .section-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-satta-black/60 via-satta-black/85 to-satta-black/95;
+  }
+  
+  .glow-overlay {
+    @apply absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(220,38,38,0.15)_0%,rgba(0,0,0,0.9)_60%,rgba(0,0,0,0.98)_100%)];
+  }
+  
+  .wireframe-card {
+    @apply border-2 border-satta-gold/40 rounded-3xl bg-satta-black/60 backdrop-blur-sm;
+  }
+  
+  .feature-card {
+    @apply bg-satta-dark/80 backdrop-blur-sm border border-satta-gold/20 rounded-3xl p-6 hover:border-satta-red/50 transition-all duration-300 hover:shadow-satta;
+  }
+  
+  .step-card {
+    @apply border-2 border-satta-gold/30 rounded-3xl bg-satta-dark/60 p-6 hover:border-satta-red/50 transition-all duration-300;
+  }
+  
+  .stat-item {
+    @apply text-center;
+  }
+  
+  .stat-value {
+    @apply text-3xl md:text-4xl font-bold text-satta-red font-montserrat;
+  }
+  
+  .stat-label {
+    @apply text-sm text-satta-gold/70 mt-1;
+  }
+  
+  .chip {
+    @apply px-4 py-2 rounded-full border border-satta-gold/40 text-sm font-medium text-satta-gold hover:border-satta-red hover:text-satta-red hover:bg-satta-red/10 transition-all duration-300;
+  }
+  
+  .noise-overlay {
+    @apply fixed inset-0 pointer-events-none z-50 opacity-[0.03];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .satta-border {
+    @apply border border-satta-gold/30;
+  }
+
+  .satta-glow {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.3), 0 0 60px rgba(251, 191, 36, 0.1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
