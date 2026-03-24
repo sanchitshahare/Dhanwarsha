@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">DhanWarsha app icon</title>
+  <desc id="desc">A red and gold rounded square with the DhanWarsha initials.</desc>
+  <defs>
+    <linearGradient id="bg" x1="72" y1="52" x2="448" y2="462" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="#08060a"/>
+  <rect x="44" y="44" width="424" height="424" rx="96" fill="url(#bg)"/>
+  <path d="M161 144h81c72 0 122 46 122 112 0 67-50 112-122 112h-81V144Zm79 174c39 0 66-25 66-62 0-38-27-62-66-62h-21v124h21Z" fill="#fff"/>
+  <path d="M323 144h38l-35 224h-39l36-224Z" fill="#fff" opacity=".9"/>
+</svg>
